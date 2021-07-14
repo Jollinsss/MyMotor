@@ -1,0 +1,6 @@
+framework module Pods_MyMotor_MyMotorUITests {
+  umbrella header "Pods-MyMotor-MyMotorUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
