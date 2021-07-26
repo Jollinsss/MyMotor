@@ -80,7 +80,7 @@ class DVSA
         
         let headers: HTTPHeaders =
         [
-            "x-api-key": "8IcbPJWOJK2tRCJrW0zpM2utQUVgVTYG2fH2Kq7X",
+            "x-api-key": "",
             "content-type": "application/json",
         ]
         
