@@ -124,6 +124,28 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zH-Gc-RKb">
+                                <rect key="frame" x="20" y="540" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="u3o-fl-oHU"/>
+                                </constraints>
+                                <state key="normal" title="Add Vehicle"/>
+                                <connections>
+                                    <action selector="addVehicle" destination="1Bj-f0-WCq" eventType="touchUpInside" id="uSR-g3-qPH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-PO-bMQ">
+                                <rect key="frame" x="20" y="620" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="twf-bO-0Rh"/>
+                                </constraints>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismiss" destination="1Bj-f0-WCq" eventType="touchUpInside" id="TMW-NH-ecq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gne-b5-FtI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,13 +153,21 @@
                         <constraints>
                             <constraint firstItem="oG0-c1-ttw" firstAttribute="top" secondItem="Gne-b5-FtI" secondAttribute="top" constant="75" id="6gQ-lL-1Jt"/>
                             <constraint firstItem="kvI-N0-dhR" firstAttribute="leading" secondItem="Gne-b5-FtI" secondAttribute="leading" constant="20" id="9vP-fd-4TR"/>
+                            <constraint firstItem="Gne-b5-FtI" firstAttribute="trailing" secondItem="EJz-PO-bMQ" secondAttribute="trailing" constant="20" id="DdI-T5-w5V"/>
+                            <constraint firstItem="EJz-PO-bMQ" firstAttribute="top" secondItem="8zH-Gc-RKb" secondAttribute="bottom" constant="30" id="Gtt-UM-eyS"/>
+                            <constraint firstItem="Gne-b5-FtI" firstAttribute="trailing" secondItem="8zH-Gc-RKb" secondAttribute="trailing" constant="20" id="QDf-pb-RFa"/>
                             <constraint firstItem="kvI-N0-dhR" firstAttribute="top" secondItem="oG0-c1-ttw" secondAttribute="bottom" constant="10" id="ZsD-3g-Uzo"/>
+                            <constraint firstItem="8zH-Gc-RKb" firstAttribute="leading" secondItem="Gne-b5-FtI" secondAttribute="leading" constant="20" id="cCP-AM-xlp"/>
                             <constraint firstItem="Vi7-rS-Vnl" firstAttribute="leading" secondItem="Gne-b5-FtI" secondAttribute="leading" constant="20" id="cex-m1-0YW"/>
+                            <constraint firstItem="8zH-Gc-RKb" firstAttribute="top" secondItem="Vi7-rS-Vnl" secondAttribute="bottom" constant="305" id="chz-5t-KYm"/>
+                            <constraint firstItem="EJz-PO-bMQ" firstAttribute="leading" secondItem="Gne-b5-FtI" secondAttribute="leading" constant="20" id="gdW-IU-YJ0"/>
                             <constraint firstItem="oG0-c1-ttw" firstAttribute="leading" secondItem="Gne-b5-FtI" secondAttribute="leading" constant="20" id="ifu-Xa-Vuw"/>
                             <constraint firstItem="Vi7-rS-Vnl" firstAttribute="top" secondItem="kvI-N0-dhR" secondAttribute="bottom" constant="10" id="ubx-RM-Oxk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="8zH-Gc-RKb" id="4p0-ua-8ni"/>
+                        <outlet property="dismissbutton" destination="EJz-PO-bMQ" id="M5J-gJ-JGX"/>
                         <outlet property="vehicleMake" destination="oG0-c1-ttw" id="c2u-3O-REL"/>
                         <outlet property="vehicleModel" destination="kvI-N0-dhR" id="WrT-T0-d8H"/>
                         <outlet property="vehicleRegistration" destination="Vi7-rS-Vnl" id="ixd-34-pOg"/>
@@ -149,6 +179,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
