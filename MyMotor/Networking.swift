@@ -12,6 +12,7 @@ import SwiftyJSON
 class DVSA
 {
     private let base_url = "https://beta.check-mot.service.gov.uk/trade/vehicles/"
+    static var vehicleRegistration = ""
     static var vehicleOdometerValue = 0
     static var vehicleMotCount = 0
     static var vehicleMotExpiry = ""
@@ -80,7 +81,7 @@ class DVSA
         
         let headers: HTTPHeaders =
         [
-            "x-api-key": "",
+            "x-api-key": "8IcbPJWOJK2tRCJrW0zpM2utQUVgVTYG2fH2Kq7X",
             "content-type": "application/json",
         ]
         
@@ -97,6 +98,7 @@ class DVSA
                         
                         if statusCode >= 200 && statusCode <= 299
                         {
+                            DVSA.vehicleRegistration = json[0]["registration"].stringValue
                             DVSA.vehicleOdometerValue = json[0]["motTests"][0]["odometerValue"].intValue
                             DVSA.vehicleMotCount = json[0]["motTests"].arrayValue.count
                             DVSA.vehicleMotExpiry = json[0]["motTests"][0]["expiryDate"].stringValue

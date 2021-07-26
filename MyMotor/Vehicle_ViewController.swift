@@ -11,6 +11,7 @@ class Vehicle_ViewController: UIViewController
 {
     @IBOutlet weak var vehicleMake: UILabel!
     @IBOutlet weak var vehicleModel: UILabel!
+    @IBOutlet weak var vehicleRegistration: UILabel!
     
     
     override func viewDidLoad()
@@ -19,6 +20,7 @@ class Vehicle_ViewController: UIViewController
 
         vehicleMake.text = DVSA.vehicleMake.uppercased()
         vehicleModel.text = DVSA.vehicleModel.uppercased()
+        vehicleRegistration.text = DVSA.vehicleRegistration.uppercased()
     }
 
 }
