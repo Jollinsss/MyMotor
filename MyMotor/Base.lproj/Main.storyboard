@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-DW-m2X">
-                                <rect key="frame" x="20" y="285" width="374" height="250"/>
+                                <rect key="frame" x="20" y="560" width="374" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -67,7 +67,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqe-yH-m8V" secondAttribute="trailing" constant="20" id="ENI-dw-eWX"/>
                             <constraint firstItem="LU7-DW-m2X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IZA-Tu-bbI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7X-aC-hZl" secondAttribute="trailing" constant="20" id="L5e-cn-jVl"/>
-                            <constraint firstItem="LU7-DW-m2X" firstAttribute="top" secondItem="Ouw-yI-qUO" secondAttribute="bottom" constant="25" id="LTd-7B-KMT"/>
+                            <constraint firstItem="LU7-DW-m2X" firstAttribute="top" secondItem="Ouw-yI-qUO" secondAttribute="bottom" constant="300" id="LTd-7B-KMT"/>
                             <constraint firstItem="S7X-aC-hZl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lfq-SC-byT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LU7-DW-m2X" secondAttribute="trailing" constant="20" id="Tj9-WI-05Z"/>
                             <constraint firstItem="Aqe-yH-m8V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Xsm-Z6-eNN"/>
@@ -80,11 +80,58 @@
                         <outlet property="findCarButton" destination="Ouw-yI-qUO" id="HMK-Jh-XY5"/>
                         <outlet property="registrationTextField" destination="S7X-aC-hZl" id="Lle-DM-ZHk"/>
                         <outlet property="vehicleInformationTextView" destination="LU7-DW-m2X" id="aSL-XW-Qy7"/>
+                        <segue destination="1Bj-f0-WCq" kind="presentation" identifier="goToVehicle" id="qYf-b9-kia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+        <!--Vehicle View Controller-->
+        <scene sceneID="7Hx-ny-BaX">
+            <objects>
+                <viewController id="1Bj-f0-WCq" customClass="Vehicle_ViewController" customModule="MyMotor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sHK-Hr-wWL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG0-c1-ttw">
+                                <rect key="frame" x="20" y="75" width="117" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Iuq-0Y-DaA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvI-N0-dhR">
+                                <rect key="frame" x="20" y="160" width="117" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7uG-bW-3cG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gne-b5-FtI"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="oG0-c1-ttw" firstAttribute="top" secondItem="Gne-b5-FtI" secondAttribute="top" constant="75" id="6gQ-lL-1Jt"/>
+                            <constraint firstItem="kvI-N0-dhR" firstAttribute="leading" secondItem="Gne-b5-FtI" secondAttribute="leading" constant="20" id="9vP-fd-4TR"/>
+                            <constraint firstItem="kvI-N0-dhR" firstAttribute="top" secondItem="oG0-c1-ttw" secondAttribute="bottom" constant="35" id="ZsD-3g-Uzo"/>
+                            <constraint firstItem="oG0-c1-ttw" firstAttribute="leading" secondItem="Gne-b5-FtI" secondAttribute="leading" constant="20" id="ifu-Xa-Vuw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="vehicleMake" destination="oG0-c1-ttw" id="c2u-3O-REL"/>
+                        <outlet property="vehicleModel" destination="kvI-N0-dhR" id="WrT-T0-d8H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmi-wQ-FwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="94"/>
         </scene>
     </scenes>
     <resources>

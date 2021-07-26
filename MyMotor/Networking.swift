@@ -21,11 +21,57 @@ class DVSA
     static var vehicleModel = ""
     static var vehiclePrimaryColour = ""
     static var vehicleRegistrationDate = ""
+    static var vehicleIsTaxed = ""
+    static var vehicleTaxDueDate = "01/01/1970"
+    static var vehicleCo2Emissions = 0
     
     struct advisories
     {
         var type: String
         var text: String
+    }
+    
+    func get_tax_details(registration_plate: String)
+    {
+        let url = "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles"
+        
+        let headers: HTTPHeaders =
+        [
+            "x-api-key": "t5Sdb47fz87UaJvCczOmG6r4v3zlzZk47vj854oE",
+            "content-type": "application/json",
+        ]
+        
+        let bodyParameters: [String: Any] =
+        [
+            "registrationNumber": registration_plate
+        ]
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: bodyParameters,
+                    encoding: JSONEncoding.default,
+                    headers: headers).responseJSON(completionHandler: {
+                        response in
+
+                        let statusCode: Int = response.response?.statusCode ?? 0
+                        let json = JSON(response.data ?? "No JSON data")
+                        
+                        print("\(statusCode) - \(json)")
+                        
+                        if statusCode >= 200 && statusCode <= 299
+                        {
+                            DVSA.vehicleIsTaxed = json["taxStatus"].stringValue
+                            DVSA.vehicleTaxDueDate = json["taxDueDate"].stringValue
+                            DVSA.vehicleCo2Emissions = json["co2Emissions"].intValue
+                            
+                            DVSA().get_vehicle_details(registration_plate: registration_plate)
+                        }
+                        else
+                        {
+                            NotificationCenter.default.post(name: Notification.Name("taxDetailsRetrievedError"), object: nil)
+                        }
+                        
+                    })
     }
     
     func get_vehicle_details(registration_plate: String)
@@ -49,7 +95,7 @@ class DVSA
                         
                         print("\(statusCode) - \(json)")
                         
-                        if statusCode == 200
+                        if statusCode >= 200 && statusCode <= 299
                         {
                             DVSA.vehicleOdometerValue = json[0]["motTests"][0]["odometerValue"].intValue
                             DVSA.vehicleMotCount = json[0]["motTests"].arrayValue.count

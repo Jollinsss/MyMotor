@@ -16,6 +16,7 @@
 		31691DCB269C751700A7D549 /* MyMotorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31691DCA269C751700A7D549 /* MyMotorTests.swift */; };
 		31691DD6269C751700A7D549 /* MyMotorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31691DD5269C751700A7D549 /* MyMotorUITests.swift */; };
 		31691DEE269C7B4200A7D549 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31691DED269C7B4200A7D549 /* Networking.swift */; };
+		317B26E826AF28A300E3A6ED /* Vehicle_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317B26E726AF28A300E3A6ED /* Vehicle_ViewController.swift */; };
 		654D4212C3FCEA8F883306CC /* Pods_MyMotorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1222AB29E0C87E7812C5652 /* Pods_MyMotorTests.framework */; };
 		7AA6278205D3AB7E93CD7AA6 /* Pods_MyMotor_MyMotorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9360657FC4CB7B29FBF989C /* Pods_MyMotor_MyMotorUITests.framework */; };
 		A5FF1DA3DEBED027CC23FD45 /* Pods_MyMotor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C4B214F7710F90782A5F08 /* Pods_MyMotor.framework */; };
@@ -56,6 +57,7 @@
 		31691DD5269C751700A7D549 /* MyMotorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMotorUITests.swift; sourceTree = "<group>"; };
 		31691DD7269C751700A7D549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31691DED269C7B4200A7D549 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		317B26E726AF28A300E3A6ED /* Vehicle_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle_ViewController.swift; sourceTree = "<group>"; };
 		3E2D6D05DF5210668428F754 /* Pods-MyMotorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMotorTests.debug.xcconfig"; path = "Target Support Files/Pods-MyMotorTests/Pods-MyMotorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6491B8E92D81D7FB181E8D7B /* Pods-MyMotor-MyMotorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMotor-MyMotorUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyMotor-MyMotorUITests/Pods-MyMotor-MyMotorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6BFF0AEAF995A5039F984C49 /* Pods-MyMotor-MyMotorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMotor-MyMotorUITests.release.xcconfig"; path = "Target Support Files/Pods-MyMotor-MyMotorUITests/Pods-MyMotor-MyMotorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				31691DBC269C751600A7D549 /* Assets.xcassets */,
 				31691DBE269C751600A7D549 /* LaunchScreen.storyboard */,
 				31691DC1269C751600A7D549 /* Info.plist */,
+				317B26E726AF28A300E3A6ED /* Vehicle_ViewController.swift */,
 			);
 			path = MyMotor;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				31691DB4269C751400A7D549 /* AppDelegate.swift in Sources */,
 				31691DB6269C751400A7D549 /* SceneDelegate.swift in Sources */,
 				31691DEE269C7B4200A7D549 /* Networking.swift in Sources */,
+				317B26E826AF28A300E3A6ED /* Vehicle_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
